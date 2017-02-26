@@ -16,10 +16,10 @@ public class LongestSubstringWithoutRepetingCharacter {
         for(int i = 0 ; i < s.length() ; i++ ) {
             if(!set.contains(s.charAt(i))) {
                 set.add(s.charAt(i));
-                maxLen = Math.max(maxLen ,set.size());
+                maxLen = Math.max(maxLen ,i-start+1);
             }else {
                 while(s.charAt(i) != s.charAt(start)) {
-                    set.remove(s.charAt(i));
+                    set.remove(s.charAt(start));
                     start++;
                 }
                 start++;
