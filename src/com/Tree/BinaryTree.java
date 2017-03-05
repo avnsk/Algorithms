@@ -2,6 +2,7 @@ package com.Tree;
 class Node{
     Node left;
     Node right;
+    Node next;
     int data;
 
 
@@ -12,6 +13,14 @@ class Node{
         n.data = data;
         return n;
     }
+
+    public boolean isLeaf() {
+        if (this.left == null && this.right == null) {
+            return true;
+        }
+        return false;
+    }
+
 }
 public class BinaryTree {
 
