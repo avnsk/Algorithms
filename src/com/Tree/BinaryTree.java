@@ -4,6 +4,7 @@ class Node{
     Node right;
     Node next;
     int data;
+    int height;
 
 
     public static Node newNode(int data){
