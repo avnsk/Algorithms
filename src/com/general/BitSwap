@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class BitSwap
+{
+	public int swapValueOfBits(int x ,int a ,int b) {
+		if(((x >> a) & 1) != ((x >> b) & 1) ) {
+			 long bitmask = 1L << a | 1L << b;
+			x ^= bitmask;
+		}
+		return x;
+	}
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+		BitSwap bsw = new BitSwap();
+		System.out.println(bsw.swapValueOfBits(5,1,2));
+		System.out.println(bsw.swapValueOfBits(47,1,4));
+	}
+}
