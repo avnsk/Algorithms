@@ -1,11 +1,13 @@
+package com.general;
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 class BitSwap
 {
-	public int swapValueOfBits(int x ,int a ,int b) {
-		if(((x >> a) & 1) != ((x >> b) & 1) ) {
+	public static long swapValueOfBits(long x ,int a ,int b) {
+		if(((x >>> a) & 1) != ((x >>> b) & 1) ) {
 			 long bitmask = 1L << a | 1L << b; //bitmask
 			x ^= bitmask;
 		}
